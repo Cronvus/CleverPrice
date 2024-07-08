@@ -107,9 +107,10 @@ header{
     5px 5px 0 black,
     6px 6px 0 #fff59d;
     -webkit-text-stroke: 2px black;
-    font-family: "Bebas_Neue", sans-serif;
+    font-family: "CyrillicCompressed", sans-serif;
+    font-size: 62px;
     /* старый шрифт
-    font-family: 'CyrillicCompressed', sans-serif;
+    font-family: 'Bebas_Neue', sans-serif; 
     font-size: 62px;
     */
 }
@@ -117,9 +118,9 @@ header{
     height: 24px;
     position: relative;
     left: 0;
-    bottom: 80px;
-    /* положение старого шрифта
     bottom: 70px;
+    /* положение старого шрифта
+    bottom: 80px;
 
      */
 }
