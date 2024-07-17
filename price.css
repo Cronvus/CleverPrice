@@ -78,8 +78,8 @@ header{
     height: 110px; /*размер ника*/
 }
 .main{
-    padding-right: 8em; /*отступ справа всех ячеек*/
-    padding-left: 8em;  /*отступ слева всех ячеек*/
+    padding-right: 6em; /*отступ справа всех ячеек (был 8em)*/
+    padding-left: 6em;  /*отступ слева всех ячеек (был 8em)*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
