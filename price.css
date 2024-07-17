@@ -87,10 +87,10 @@ header{
 .units{
     border: 5px outset orangered;
     background: url("image/background-units.png");
-    width: 240px; /*ширина ячейки*/
-    height: 240px; /*высота ячейки*/
-    /*высота и ширина должна быть одинаковая для квадрата*/
-    background-size: 240px 240px; /* размер заднего фона, подгоняй под размер ячейки*/
+    width: 200px; /*ширина ячейки*/
+    height: 200px; /*высота ячейки*/
+    /*высота и ширина должна быть одинаковая для квадрата 240 был*/
+    background-size: 200px 200px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
 }
 .unit{
