@@ -203,7 +203,7 @@ header{
     margin-top: -8px;
     font-size: 45px;
     padding-left: 5px;
-    color: rgb(124 252 0); /*тут можешь поменять rgb на # или название цвета*/
+    color: rgb(59 176 143); /*тут можешь поменять rgb на # или название цвета*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
     animation: pulsateHIT 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
