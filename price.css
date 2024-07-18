@@ -194,10 +194,10 @@ header{
 .openNew{
     display: block;
 }
-@keyframes pulsateHit {
+@keyframes pulsateHIT {
     50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
 }
-.Hit{
+.HIT{
     display: none;
     position: absolute;
     margin-top: -8px;
@@ -208,6 +208,6 @@ header{
     animation: pulsateHit 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
-.openHit{
+.openHIT{
     display: block;
 }
