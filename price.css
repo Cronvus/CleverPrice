@@ -225,7 +225,7 @@ header{
     margin-top: -8px;
     font-size: 45px;
     padding-left: 5px;
-    color: rgb(254 254 34); /*тут можешь поменять rgb на # или название цвета*/
+    color: #FFD700; /*тут можешь поменять rgb на # или название цвета rgb(254 254 34)*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
     animation: pulsateBEST 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
