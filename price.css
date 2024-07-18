@@ -203,11 +203,29 @@ header{
     margin-top: -8px;
     font-size: 45px;
     padding-left: 5px;
-    color: rgb(0 155 0); /*тут можешь поменять rgb на # или название цвета*/
+    color: rgb(124 252 0); /*тут можешь поменять rgb на # или название цвета*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
     animation: pulsateHIT 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
 .openHIT{
+    display: block;
+}
+
+@keyframes pulsateBEST {
+    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+}
+.BEST{
+    display: none;
+    position: absolute;
+    margin-top: -8px;
+    font-size: 45px;
+    padding-left: 5px;
+    color: rgb(255 43 43); /*тут можешь поменять rgb на # или название цвета*/
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    animation: pulsateBEST 1.2s linear infinite;
+    font-family: "CyrillicCompressed", sans-serif;
+}
+.openBEST{
     display: block;
 }
