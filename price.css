@@ -205,7 +205,7 @@ header{
     padding-left: 5px;
     color: rgb(0 155 0); /*тут можешь поменять rgb на # или название цвета*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
-    animation: pulsateHit 1.2s linear infinite;
+    animation: pulsateHIT 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
 .openHIT{
