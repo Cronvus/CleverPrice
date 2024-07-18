@@ -216,8 +216,8 @@ header{
     50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
 } */
 @keyframes pulsateBEST {
-    0%, 100% { color: rgb(254 254 34); text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #FFFF00, 0 0 8px #FFFF00; }
-    50% { color: rgb(0 146 221); text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #0000FF, 0 0 8px #0000FF; }
+    0%, 100% { color: #FFFF00; text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #FFFF00, 0 0 8px #FFFF00; }
+    50% { color: #0000FF; text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #0000FF, 0 0 8px #0000FF; }
 }
 .BEST{
     display: none;
