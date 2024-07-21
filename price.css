@@ -178,7 +178,7 @@ header{
     height: 120%;
 }
 @keyframes pulsate {
-    50% { color: red; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: red; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
 }
 .NEW{
     display: none;
@@ -191,11 +191,9 @@ header{
     animation: pulsate 1.2s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
-.openNew{
-    display: block;
-}
+
 @keyframes pulsateHIT {
-    50% { color: darkmagenta; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: darkmagenta; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
 }
 .HIT{
     display: none;
@@ -208,12 +206,9 @@ header{
     animation: pulsateHIT 1.1s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
-.openHIT{
-    display: block;
-}
 
 @keyframes pulsateBEST {
-    50% { color: midnightblue; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: midnightblue; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
 } 
 
 .BEST{
@@ -227,6 +222,7 @@ header{
     animation: pulsateBEST 1s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
-.openBEST{
-    display: block;
+
+.openPuls{
+    display: block; /*Достаточно одного правила на открытие пульсации, оно должо быть всегда ниже других*/
 }
