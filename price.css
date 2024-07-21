@@ -87,10 +87,10 @@ header{
 .units{
     border: 5px outset orangered;
     background: url("image/background-units.png");
-    width: 200px; /*ширина ячейки*/
-    height: 200px; /*высота ячейки*/
+    width: 210px; /*ширина ячейки*/
+    height: 210px; /*высота ячейки*/
     /*высота и ширина должна быть одинаковая для квадрата 240 был*/
-    background-size: 200px 200px; /* размер заднего фона, подгоняй под размер ячейки*/
+    background-size: 210px 210px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
 }
 .unit{
@@ -127,7 +127,7 @@ header{
 }
 #id_clock{
     position: relative;
-    left: 150px; 
+    left: 140px;
     bottom: 90px; 
     font-size: 80px;
     font-family: "ClockBomb", sans-serif;
@@ -141,7 +141,7 @@ header{
 .FixWHM{
     width: 70%;
     height: 90%;
-    margin-top: 23px;
+    margin-top: 20px;
 }
 .sptv{
     width: 85%;
@@ -159,7 +159,7 @@ header{
 }
 .DJ{
     height: 85%;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 .mechB{
     width: 85%;
@@ -172,13 +172,13 @@ header{
 }
 .womanC{
     height: 95%;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 .Toilet{
     height: 120%;
 }
 @keyframes pulsate {
-    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: red; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
 }
 .NEW{
     display: none;
@@ -195,7 +195,7 @@ header{
     display: block;
 }
 @keyframes pulsateHIT {
-    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: darkmagenta; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
 }
 .HIT{
     display: none;
@@ -205,7 +205,7 @@ header{
     padding-left: 5px;
     color: rgb(59 176 143); /*тут можешь поменять rgb на # или название цвета*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
-    animation: pulsateHIT 1.2s linear infinite;
+    animation: pulsateHIT 1.1s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
 .openHIT{
@@ -213,7 +213,7 @@ header{
 }
 
 @keyframes pulsateBEST {
-    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
+    50% { color: midnightblue; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в color подбери какой нравится*/
 } 
 
 .BEST{
@@ -224,7 +224,7 @@ header{
     padding-left: 5px;
     color: #FFD700; /*тут можешь поменять rgb на # или название цвета rgb(254 254 34)*/
     text-shadow: 0 -1px rgba(0,0,0,.1);
-    animation: pulsateBEST 1.2s linear infinite;
+    animation: pulsateBEST 1s linear infinite;
     font-family: "CyrillicCompressed", sans-serif;
 }
 .openBEST{
