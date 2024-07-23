@@ -78,8 +78,8 @@ header{
     height: 110px; /*размер ника*/
 }
 .main{
-    padding-right: 1em; /*отступ справа всех ячеек (был 8em)*/
-    padding-left: 1em;  /*отступ слева всех ячеек (был 8em)*/
+    padding-right: 2em; /*отступ справа всех ячеек (был 8em)*/
+    padding-left: 2em;  /*отступ слева всех ячеек (был 8em)*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,10 +87,10 @@ header{
 .units{
     border: 5px outset orangered;
     background: url("image/background-units.png");
-    width: 210px; /*ширина ячейки*/
-    height: 210px; /*высота ячейки*/
+    width: 205px; /*ширина ячейки*/
+    height: 205px; /*высота ячейки*/
     /*высота и ширина должна быть одинаковая для квадрата 240 был*/
-    background-size: 210px 210px; /* размер заднего фона, подгоняй под размер ячейки*/
+    background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
 }
 .unit{
@@ -148,10 +148,9 @@ header{
     height: 90%;
     margin-top: 20px;
 }
-.speakD{
-    width: 85%;
-    height: 90%;
-    margin-top: 20px;
+.sunBoy{
+    height: 105%;
+    margin-bottom: -10px;
 }
 .Mew{
     width: 90%;
@@ -168,7 +167,7 @@ header{
     width: 80%;
 }
 .Ded{
-    width: 80%;
+    width: 70%;
 }
 .womanC{
     height: 95%;
