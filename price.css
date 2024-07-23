@@ -79,7 +79,7 @@ header{
 }
 .main{
     padding-right: 2em; /*отступ справа всех ячеек (был 8em)*/
-    padding-left: 2em;  /*отступ слева всех ячеек (был 8em)*/
+    padding-left: 3em;  /*отступ слева всех ячеек (был 8em)*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
