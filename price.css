@@ -176,6 +176,43 @@ header{
 .Toilet{
     height: 120%;
 }
+.Ult{
+    position: absolute;
+    top: 315px;
+    border: 5px outset orangered;
+    background: url("image/background-units.png");
+    width: 410px; /*ширина ячейки*/
+    height: 410px; /*высота ячейки*/
+    /*высота и ширина должна быть одинаковая для квадрата 240 был*/
+    background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
+    text-align: center;
+}
+.UltClock{
+    left: 462px;
+}
+.UltDrill{
+    right: 439px;
+}
+.priceUlt{
+    position: relative;
+    bottom: 115px;
+}
+.price-unitUlt{
+    color: #fff59d;
+    text-align: center;
+    text-shadow: 1px 1px 0 black,
+    2px 2px 0 black,
+    3px 3px 0 black,
+    4px 4px 0 black,
+    5px 5px 0 black,
+    6px 6px 0 #fff59d;
+    -webkit-text-stroke: 2px black;
+    font-family: "CyrillicCompressed", sans-serif;
+    font-size: 105px;
+}
+.hidden{
+    display: none;
+}
 @keyframes pulsate {
     50% { color: red; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
 }
@@ -224,4 +261,12 @@ header{
 
 .openPuls{
     display: block; /*Достаточно одного правила на открытие пульсации, оно должо быть всегда ниже других*/
+}
+.button{
+    position: relative;
+    top: 120px;
+    right: 720px;
+    width: 100px;
+    height: 23px;
+    margin-left: 50px;
 }

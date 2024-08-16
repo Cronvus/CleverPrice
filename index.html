@@ -5,19 +5,6 @@
     <link rel="stylesheet" href="price.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clever Price</title>
-    <script>
-        function digitalClock() {
-            let date = new Date();
-            let hours = date.getHours();
-            let minutes = date.getMinutes();
-            let seconds = date.getSeconds();
-            if (hours < 10) hours = "0" + hours;
-            if (minutes < 10) minutes = "0" + minutes;
-            if (seconds < 10) seconds = "0" + seconds;
-            document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
-            setTimeout("digitalClock()", 1000);
-        }
-    </script>
 </head>
 <body>
  <header>
@@ -25,7 +12,6 @@
          <img class="nameClever" src="image/NIck.png" alt="Mr_CleverMaan">
      </div>
      <div id="id_clock"></div>
-     <script>digitalClock();</script>
  </header>
  <main class="main">
      <div class="units">
@@ -107,7 +93,7 @@
      </div>
      <div  class="units">
          <p class="NEW openPuls">NEW</p>
-         <img class="unit FixW" src="image/DTC.jpg" alt="DTC">
+         <img class="unit" src="image/DTC.jpg" alt="DTC">
          <div class="price">
              <p class="price-unit">251 РУБ</p>
          </div>
@@ -252,12 +238,28 @@
              <p class="price-unit">9999 РУБ</p>
          </div>
      </div>
+     <div class="Ult UltClock hidden">
+         <p class="NEW">NEW</p>   <!--добавь в кавычки к NEW еще один класс, должно получится "NEW openNew"-->
+         <img class="unit" src="image/UDrill.gif" alt="UltClock">
+         <div class="priceUlt">
+             <p class="price-unitUlt">9999 РУБ</p>
+         </div>
+     </div>
+     <div class="Ult UltDrill hidden">
+         <p class="NEW">NEW</p>   <!--добавь в кавычки к NEW еще один класс, должно получится "NEW openNew"-->
+         <img class="unit" src="image/UDrill.gif" alt="UltDrill">
+         <div class="priceUlt">
+             <p class="price-unitUlt">9999 РУБ</p>
+         </div>
+     </div>
+     <button type="button" class="button clockButton">УльтКлок</button>
+     <button type="button" class="button drillButton">УльтДрил</button>
 
 
 
 
 
  </main>
-
+ <script src="script.js"></script>
 </body>
 </html>
