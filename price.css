@@ -176,6 +176,14 @@ header{
 .Toilet{
     height: 120%;
 }
+@keyframes fadeinout {
+    0%, 20%, 80%, 100% {
+        opacity: 0;
+    }
+    30%, 70% {
+        opacity: 1;
+    }
+}
 .Ult{
     position: absolute;
     top: 315px;
@@ -186,6 +194,7 @@ header{
     /*высота и ширина должна быть одинаковая для квадрата 240 был*/
     background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
+    animation: fadeinout 30s linear infinite;
 }
 .UltClock{
     left: 462px;
