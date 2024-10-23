@@ -98,13 +98,15 @@ header{
     width: 100%;
     height: 100%;
 }
-.units1 {
+// test timers
+.units {
     display: none; /* Изначально скрываем все div */
 }
 
-.units1.active {
-    display: block; /* Отображаем только активный div */
+.group1 {
+    display: block; /* Отображаем только первую группу */
 }
+// test timers
 .price-unit{
     color: #fff59d;
     text-align: center;
