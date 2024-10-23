@@ -24,3 +24,20 @@ buttonDrill.addEventListener('click', function(evt) {
     evt.preventDefault();
     UltDrill.classList.toggle("hidden");
 })
+// тестирую таймеры
+let currentDiv = 0;
+const units = document.querySelectorAll('.units1');
+
+// Показываем первый div изначально
+units[currentDiv].style.display = 'block';
+
+setInterval(() => {
+    // Скрываем текущий div
+    units[currentDiv].style.display = 'none'; 
+
+    // Переходим к следующему
+    currentDiv = (currentDiv + 1) % units.length; 
+
+    // Показываем новый div
+    units[currentDiv].style.display = 'block'; 
+}, 3000); // Меняет div каждые 3 секунды
