@@ -40,4 +40,4 @@ function toggleDiv() {
 }
 
 // Устанавливаем интервал на 3 секунды (3000 мс)
-setInterval(toggleDiv, 15000);
+setInterval(toggleDiv, 10000);
