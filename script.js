@@ -26,18 +26,18 @@ buttonDrill.addEventListener('click', function(evt) {
 })
 // Test Timers
 function toggleDiv() {
-    const axeDiv = document.getElementById("Axe");
-    const newDiv = document.getElementById("Arachnid");
+    const group1Div = document.getElementById("group1");
+    const group2Div = document.getElementById("group2");
 
     // Проверяем текущее состояние видимости
-    if (axeDiv.style.display === "none") {
-        axeDiv.style.display = "block"; // Показываем Axe
-        newDiv.style.display = "none";   // Скрываем новый див
+    if (group1Div.style.display === "none") {
+        group1Div.style.display = "block"; // Показываем group1
+        group2Div.style.display = "none";   // Скрываем group2
     } else {
-        axeDiv.style.display = "none";    // Скрываем Axe
-        newDiv.style.display = "block";   // Показываем новый див
+        group1Div.style.display = "none";    // Скрываем group1
+        group2Div.style.display = "block";   // Показываем group2
     }
 }
 
 // Устанавливаем интервал на 3 секунды (3000 мс)
-setInterval(toggleDiv, 3000);
+setInterval(toggleDiv, 15000);
