@@ -24,20 +24,3 @@ buttonDrill.addEventListener('click', function(evt) {
     evt.preventDefault();
     UltDrill.classList.toggle("hidden");
 })
-// тестирую таймеры
-let isGroup1Visible = true; // Начинаем с первой группы
-
-setInterval(() => {
-    const group1 = document.querySelectorAll('.group1');
-    const group2 = document.querySelectorAll('.group2');
-
-    if (isGroup1Visible) {
-        group1.forEach(div => div.style.display = 'none'); // Скрываем первую группу
-        group2.forEach(div => div.style.display = 'block'); // Показываем вторую группу
-    } else {
-        group1.forEach(div => div.style.display = 'block'); // Показываем первую группу
-        group2.forEach(div => div.style.display = 'none'); // Скрываем вторую группу
-    }
-
-    isGroup1Visible = !isGroup1Visible; // Переключаем состояние
-}, 3000); // Меняет группы каждые 3 секунды
