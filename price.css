@@ -98,6 +98,13 @@ header{
     width: 100%;
     height: 100%;
 }
+.units1 {
+    display: none; /* Изначально скрываем все div */
+}
+
+.units1.active {
+    display: block; /* Отображаем только активный div */
+}
 .price-unit{
     color: #fff59d;
     text-align: center;
