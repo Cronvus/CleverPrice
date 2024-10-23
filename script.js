@@ -25,14 +25,19 @@ buttonDrill.addEventListener('click', function(evt) {
     UltDrill.classList.toggle("hidden");
 })
 // Test Timers
-function replaceDiv() {
+function toggleDiv() {
     const axeDiv = document.getElementById("Axe");
-    const arachnidDiv = document.getElementById("Arachnid");
+    const newDiv = document.getElementById("Arachnid");
 
-    // Скрываем первый див и показываем новый
-    axeDiv.style.display = "none"; // Скрываем Axe
-    newDiv.style.display = "block"; // Показываем новый див
+    // Проверяем текущее состояние видимости
+    if (axeDiv.style.display === "none") {
+        axeDiv.style.display = "block"; // Показываем Axe
+        newDiv.style.display = "none";   // Скрываем новый див
+    } else {
+        axeDiv.style.display = "none";    // Скрываем Axe
+        newDiv.style.display = "block";   // Показываем новый див
+    }
 }
 
-// Заменяем через 3 секунды (3000 мс)
-setTimeout(replaceDiv, 3000);
+// Устанавливаем интервал на 3 секунды (3000 мс)
+setInterval(toggleDiv, 3000);
