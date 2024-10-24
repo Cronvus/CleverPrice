@@ -84,6 +84,11 @@ header{
     flex-wrap: wrap;
     justify-content: center;
 }
+.box{
+    display: block;
+    background: url("image/background-units.png");
+
+}
 .units{
     border: 5px outset orangered;
     background: url("image/background-units.png");
@@ -92,6 +97,8 @@ header{
     /*высота и ширина должна быть одинаковая для квадрата 240 был*/
     background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 .unit{
     /*размер который должны занимать юниты в ячейке, по умолчанию поставил 100% ячейки, подгоняй добавляя классы*/
@@ -278,4 +285,22 @@ header{
     width: 100px;
     height: 23px;
     margin-left: 50px;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.visible-group {
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+.hidden-group{
+    display: none;
+    animation: fadeOut 1s forwards;
 }

@@ -16,28 +16,31 @@ function digitalClock() {
 }
 window.onload = digitalClock;
 
-buttonClock.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    UltClock.classList.toggle("hidden");
-})
-buttonDrill.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    UltDrill.classList.toggle("hidden");
-})
-// Test Timers
+
 function toggleDiv() {
     const group1Div = document.getElementById("group1");
     const group2Div = document.getElementById("group2");
 
-    // Проверяем текущее состояние видимости
-    if (group1Div.style.display === "none") {
-        group1Div.style.display = "block"; // Показываем group1
-        group2Div.style.display = "none";   // Скрываем group2
+    if (group1Div.classList.contains("visible-group")) {
+        group1Div.classList.remove("visible-group");
+        group1Div.classList.add("hidden-group");
+
+        setTimeout(() => {
+            group2Div.classList.add("visible-group");
+            group2Div.classList.remove("hidden-group");
+        }, 0.1); // Задержка, чтобы дождаться окончания анимации скрытия
     } else {
-        group1Div.style.display = "none";    // Скрываем group1
-        group2Div.style.display = "block";   // Показываем group2
+        group2Div.classList.remove("visible-group");
+        group2Div.classList.add("hidden-group");
+
+        setTimeout(() => {
+            group1Div.classList.add("visible-group");
+            group1Div.classList.remove("hidden-group");
+        }, 0.1); // Задержка, чтобы дождаться окончания анимации скрытия
     }
 }
 
-// Устанавливаем интервал на 3 секунды (3000 мс)
+
 setInterval(toggleDiv, 10000);
+
+
