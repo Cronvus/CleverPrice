@@ -28,7 +28,7 @@ function toggleDiv() {
         setTimeout(() => {
             group2Div.classList.add("visible-group");
             group2Div.classList.remove("hidden-group");
-        }, 0.1); // Задержка, чтобы дождаться окончания анимации скрытия
+        }, 0.01); // Задержка, чтобы дождаться окончания анимации скрытия
     } else {
         group2Div.classList.remove("visible-group");
         group2Div.classList.add("hidden-group");
@@ -36,7 +36,7 @@ function toggleDiv() {
         setTimeout(() => {
             group1Div.classList.add("visible-group");
             group1Div.classList.remove("hidden-group");
-        }, 0.1); // Задержка, чтобы дождаться окончания анимации скрытия
+        }, 0.01); // Задержка, чтобы дождаться окончания анимации скрытия
     }
 }
 
