@@ -18,8 +18,8 @@ window.onload = digitalClock;
 
 
 function toggleDiv() {
-    const group1Div = document.getElementsByTagName("group1");
-    const group2Div = document.getElementsByTagName("group2");
+    const group1Div = document.getElementsById("group1");
+    const group2Div = document.getElementsById("group2");
 
     if (group1Div.classList.contains("visible-group")) {
         group1Div.classList.remove("visible-group");
