@@ -89,12 +89,14 @@ header{
     background: url("image/background-units.png");
 
 .hidden-group {
-    display: none;
+    opacity: 0; /* Полная прозрачность */
+    visibility: hidden; /* Элемент скрыт */
 }
 
 .visible-group {
-    display: block;
-}  
+    opacity: 1; /* Полная видимость */
+    visibility: visible; /* Элемент видим */
+}
     
 }
 .units{
@@ -106,6 +108,7 @@ header{
     background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
     opacity: 1;
+    visibility: visible; /* Элемент видим (тест переходов) */
     transition: opacity 0.5s ease;
 }
 .unit{
