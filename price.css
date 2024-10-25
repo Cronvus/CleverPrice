@@ -108,7 +108,6 @@ header{
     background-size: 205px 205px; /* размер заднего фона, подгоняй под размер ячейки*/
     text-align: center;
     opacity: 1;
-    visibility: visible; /* Элемент видим (тест переходов) */
     transition: opacity 0.5s ease;
 }
 .unit{
