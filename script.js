@@ -41,6 +41,6 @@ function toggleDiv() {
 }
 
 
-setInterval(toggleDiv, 10000);
+setInterval(toggleDiv, 3000);
 
 
