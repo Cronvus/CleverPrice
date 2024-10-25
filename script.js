@@ -17,22 +17,33 @@ function digitalClock() {
 window.onload = digitalClock;
 
 
-let currentIndex = 0; // Начальный индекс
+let currentGroup1Index = 0; // Индекс для group1
+let currentGroup2Index = 0; // Индекс для group2)
 
 // Получаем все блоки group1 и group2
 const group1Divs = document.querySelectorAll('.group1'); 
 const group2Divs = document.querySelectorAll('.group2');
 
 function toggleGroups() {
-    // Скрываем текущий group1 и показываем соответствующий group2
-    group1Divs[currentIndex].classList.remove('visible-group');
-    group1Divs[currentIndex].classList.add('hidden-group');
+    // Скрываем текущий блок group1 и показываем соответствующий блок group2
+    group1Divs[currentGroup1Index].classList.remove('visible-group');
+    group1Divs[currentGroup1Index].classList.add('hidden-group');
 
-    group2Divs[currentIndex].classList.remove('hidden-group');
-    group2Divs[currentIndex].classList.add('visible-group');
+    group2Divs[currentGroup1Index].classList.remove('hidden-group');
+    group2Divs[currentGroup1Index].classList.add('visible-group');
 
     // Увеличиваем индекс для следующей итерации
-    currentIndex = (currentIndex + 1) % group1Divs.length; // Циклический переход на следующий индекс
+    currentGroup1Index = (currentGroup1Index + 1) % group1Divs.length; // Циклический переход на следующий индекс
+
+    // Скрываем текущий блок group2 и показываем соответствующий блок group1
+    group2Divs[currentGroup2Index].classList.remove('visible-group');
+    group2Divs[currentGroup2Index].classList.add('hidden-group');
+
+    group1Divs[currentGroup2Index].classList.remove('hidden-group');
+    group1Divs[currentGroup2Index].classList.add('visible-group');
+
+    // Увеличиваем индекс для следующей итерации
+    currentGroup2Index = (currentGroup2Index + 1) % group2Divs.length; // Циклический переход на следующий индекс
 }
 
 // Запускаем цикл переключения каждые 6 секунд
