@@ -33,7 +33,7 @@ function toggleGroups() {
             div.classList.remove('hidden-group');
             div.classList.add('visible-group');
         });
-    }, 500); // Задержка на время анимации (500 мс)
+    }, 100); // Задержка на время анимации (500 мс)
 
     // Меняем обратно через 5 секунд
     setTimeout(() => {
@@ -48,11 +48,11 @@ function toggleGroups() {
                 div.classList.remove('hidden-group');
                 div.classList.add('visible-group');
             });
-        }, 500);
-    }, 5000); // Время до обратного переключения (5000 мс)
+        }, 100);
+    }, 10000); // Время до обратного переключения (5000 мс)
 }
 
 // Запускаем цикл переключения
-setInterval(toggleGroups, 10000); // Меняем группы каждые 6 секунд, чтобы дать время на обе анимации.
+setInterval(toggleGroups, 50000); // Меняем группы каждые 6 секунд, чтобы дать время на обе анимации.
 
 
