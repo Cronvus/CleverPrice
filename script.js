@@ -17,42 +17,30 @@ function digitalClock() {
 window.onload = digitalClock;
 
 
+let currentGroupIndex = 0; // Индекс текущей группы
+const group1Divs = document.querySelectorAll('.group1');
+const group2Divs = document.querySelectorAll('.group2');
+
 function toggleGroups() {
-    const group1Divs = document.querySelectorAll('.group1'); // Получаем все элементы с классом 'group1'
-    const group2Divs = document.querySelectorAll('.group2'); // Получаем все элементы с классом 'group2'
+    // Получаем текущие группы
+    const currentGroup1 = group1Divs[currentGroupIndex];
+    const currentGroup2 = group2Divs[currentGroupIndex];
 
-    // Сначала добавим класс hidden-group для group1
-    group1Divs.forEach(div => {
-        div.classList.remove('visible-group');
-        div.classList.add('hidden-group');
-    });
+    // Скрываем текущий блок group1
+    currentGroup1.classList.remove('visible-group');
+    currentGroup1.classList.add('hidden-group');
 
-    // После завершения анимации, меняем классы group2
+    // Появление следующего блока group2
     setTimeout(() => {
-        group2Divs.forEach(div => {
-            div.classList.remove('hidden-group');
-            div.classList.add('visible-group');
-        });
-    }, 100); // Задержка на время анимации (500 мс)
+        currentGroup2.classList.remove('hidden-group');
+        currentGroup2.classList.add('visible-group');
 
-    // Меняем обратно через 5 секунд
-    setTimeout(() => {
-        group2Divs.forEach(div => {
-            div.classList.remove('visible-group');
-            div.classList.add('hidden-group');
-        });
-
-        // Меняем классы group1 обратно через 500 мс
-        setTimeout(() => {
-            group1Divs.forEach(div => {
-                div.classList.remove('hidden-group');
-                div.classList.add('visible-group');
-            });
-        }, 100);
-    }, 10000); // Время до обратного переключения (5000 мс)
+        // Переключаем индекс для следующего блока
+        currentGroupIndex = (currentGroupIndex + 1) % group1Divs.length; // Циклический переход
+    }, 300); // Задержка для анимации исчезновения
 }
 
 // Запускаем цикл переключения
-setInterval(toggleGroups, 5000); // Меняем группы каждые 6 секунд, чтобы дать время на обе анимации.
+setInterval(toggleGroups, 3000); // Каждые 6 секунд, включая анимацию
 
 
