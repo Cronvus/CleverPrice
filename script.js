@@ -26,7 +26,7 @@ function toggleGroups() {
     const currentGroup1 = group1Divs[currentGroupIndex];
     const currentGroup2 = group2Divs[currentGroupIndex];
 
-    // Скрываем текущий блок group1
+    // Скрываем текущий блок group1 и показываем соответствующий ей group2
     currentGroup1.classList.remove('visible-group');
     currentGroup1.classList.add('hidden-group');
 
@@ -34,13 +34,28 @@ function toggleGroups() {
     setTimeout(() => {
         currentGroup2.classList.remove('hidden-group');
         currentGroup2.classList.add('visible-group');
+    }, 500); // Задержка для анимации исчезновения
 
-        // Переключаем индекс для следующего блока
-        currentGroupIndex = (currentGroupIndex + 1) % group1Divs.length; // Циклический переход
-    }, 300); // Задержка для анимации исчезновения
+    // Увеличиваем индекс, чтобы переключаться на следующий блок
+    currentGroupIndex = (currentGroupIndex + 1) % group1Divs.length; // Циклический переход на следующий блок
+
+    // Очистка обратно
+    setTimeout(() => {
+        const nextGroup1 = group1Divs[currentGroupIndex]; // Следующий group1
+        const nextGroup2 = group2Divs[currentGroupIndex]; // Следующий group2
+        
+        // Скрытие нового group2 и показ нового group1
+        nextGroup2.classList.remove('visible-group');
+        nextGroup2.classList.add('hidden-group');
+        
+        setTimeout(() => {
+            nextGroup1.classList.remove('hidden-group');
+            nextGroup1.classList.add('visible-group');
+        }, 500); // Плавная анимация
+    }, 6000); // Общее время ожидания между полными заменами
 }
 
 // Запускаем цикл переключения
-setInterval(toggleGroups, 3000); // Каждые 6 секунд, включая анимацию
+setInterval(toggleGroups, 6000); // Вызов функции каждые 6 секунд
 
 
