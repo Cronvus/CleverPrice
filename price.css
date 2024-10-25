@@ -88,6 +88,14 @@ header{
     display: block;
     background: url("image/background-units.png");
 
+.hidden-group {
+    display: none;
+}
+
+.visible-group {
+    display: block;
+}  
+    
 }
 .units{
     border: 5px outset orangered;
