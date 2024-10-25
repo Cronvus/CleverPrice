@@ -17,30 +17,31 @@ function digitalClock() {
 window.onload = digitalClock;
 
 
-function toggleDiv() {
-    const group1Div = document.getElementById("group1");
-    const group2Div = document.getElementById("group2");
+function toggleGroups() {
+    const group1Divs = document.querySelectorAll('.group1'); // Получаем все элементы с классом 'group1'
+    const group2Divs = document.querySelectorAll('.group2'); // Получаем все элементы с классом 'group2'
 
-    if (group1Div.classList.contains("visible-group")) {
-        group1Div.classList.remove("visible-group");
-        group1Div.classList.add("hidden-group");
+    // Меняем класс: group1 на group2
+    group1Divs.forEach(div => {
+        div.classList.remove('visible-group');
+        div.classList.add('hidden-group');
+    });
 
-        setTimeout(() => {
-            group2Div.classList.add("visible-group");
-            group2Div.classList.remove("hidden-group");
-        }, 0.01); // Задержка, чтобы дождаться окончания анимации скрытия
-    } else {
-        group2Div.classList.remove("visible-group");
-        group2Div.classList.add("hidden-group");
-
-        setTimeout(() => {
-            group1Div.classList.add("visible-group");
-            group1Div.classList.remove("hidden-group");
-        }, 0.01); // Задержка, чтобы дождаться окончания анимации скрытия
-    }
+    // Меняем класс: group2 на group1
+    group2Divs.forEach(div => {
+        div.classList.remove('hidden-group');
+        div.classList.add('visible-group');
+    });
 }
 
+// Первоначальная смена групп после 3 секунд
+setTimeout(() => {
+    toggleGroups(); // Смена классов с group1 на group2
+}, 3000); // Время в миллисекундах
 
-setInterval(toggleDiv, 3000);
+// Обратная смена групп через 6 секунд (3 секунды после первой смены)
+setTimeout(() => {
+    toggleGroups(); // Смена классов с group2 обратно на group1
+}, 6000); // Время в миллисекундах
 
 
