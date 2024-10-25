@@ -21,27 +21,38 @@ function toggleGroups() {
     const group1Divs = document.querySelectorAll('.group1'); // Получаем все элементы с классом 'group1'
     const group2Divs = document.querySelectorAll('.group2'); // Получаем все элементы с классом 'group2'
 
-    // Меняем класс: group1 на group2
+    // Сначала добавим класс hidden-group для group1
     group1Divs.forEach(div => {
         div.classList.remove('visible-group');
         div.classList.add('hidden-group');
     });
 
-    // Меняем класс: group2 на group1
-    group2Divs.forEach(div => {
-        div.classList.remove('hidden-group');
-        div.classList.add('visible-group');
-    });
+    // После завершения анимации, меняем классы group2
+    setTimeout(() => {
+        group2Divs.forEach(div => {
+            div.classList.remove('hidden-group');
+            div.classList.add('visible-group');
+        });
+    }, 500); // Задержка на время анимации (500 мс)
+
+    // Меняем обратно через 5 секунд
+    setTimeout(() => {
+        group2Divs.forEach(div => {
+            div.classList.remove('visible-group');
+            div.classList.add('hidden-group');
+        });
+
+        // Меняем классы group1 обратно через 500 мс
+        setTimeout(() => {
+            group1Divs.forEach(div => {
+                div.classList.remove('hidden-group');
+                div.classList.add('visible-group');
+            });
+        }, 500);
+    }, 5000); // Время до обратного переключения (5000 мс)
 }
 
-// Первоначальная смена групп после 3 секунд
-setTimeout(() => {
-    toggleGroups(); // Смена классов с group1 на group2
-}, 3000); // Время в миллисекундах
-
-// Обратная смена групп через 6 секунд (3 секунды после первой смены)
-setTimeout(() => {
-    toggleGroups(); // Смена классов с group2 обратно на group1
-}, 6000); // Время в миллисекундах
+// Запускаем цикл переключения
+setInterval(toggleGroups, 10000); // Меняем группы каждые 6 секунд, чтобы дать время на обе анимации.
 
 
