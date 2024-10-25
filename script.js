@@ -17,28 +17,25 @@ function digitalClock() {
 window.onload = digitalClock;
 
 
-const group1Div = document.querySelector('.group1'); // Получаем блок group1
-const group2Div = document.querySelector('.group2'); // Получаем блок group2
+let currentIndex = 0; // Начальный индекс
+
+// Получаем все блоки group1 и group2
+const group1Divs = document.querySelectorAll('.group1'); 
+const group2Divs = document.querySelectorAll('.group2');
 
 function toggleGroups() {
-    if (group1Div.classList.contains('visible-group')) {
-        // Если group1 видимый, скрываем его и показываем group2
-        group1Div.classList.remove('visible-group');
-        group1Div.classList.add('hidden-group');
-        
-        group2Div.classList.remove('hidden-group');
-        group2Div.classList.add('visible-group');
-    } else {
-        // Если group2 видимый, скрываем его и показываем group1
-        group2Div.classList.remove('visible-group');
-        group2Div.classList.add('hidden-group');
+    // Скрываем текущий group1 и показываем соответствующий group2
+    group1Divs[currentIndex].classList.remove('visible-group');
+    group1Divs[currentIndex].classList.add('hidden-group');
 
-        group1Div.classList.remove('hidden-group');
-        group1Div.classList.add('visible-group');
-    }
+    group2Divs[currentIndex].classList.remove('hidden-group');
+    group2Divs[currentIndex].classList.add('visible-group');
+
+    // Увеличиваем индекс для следующей итерации
+    currentIndex = (currentIndex + 1) % group1Divs.length; // Циклический переход на следующий индекс
 }
 
 // Запускаем цикл переключения каждые 6 секунд
-setInterval(toggleGroups, 10000);
+setInterval(toggleGroups, 6000);
 
 
