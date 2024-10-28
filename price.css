@@ -153,6 +153,10 @@ header{
 .FixW{
     width: 70%;
 }
+.FixGrim{
+    width: 70%;
+    height: 70%;
+}
 .FixWHM{
     width: 70%;
     height: 90%;
